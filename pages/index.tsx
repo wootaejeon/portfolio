@@ -1,21 +1,30 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import globalStyles from "../styles/global";
+
+import Main from "../components/main";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter"
+          rel="stylesheet"
+        />
         <title>Wootae Jeon</title>
         <meta name="description" content="Web portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}></main>
+      <main>
+        <Main />
+      </main>
 
-      <footer className={styles.footer}></footer>
-    </div>
+      <style jsx global>
+        {globalStyles}
+      </style>
+    </>
   );
 };
 
