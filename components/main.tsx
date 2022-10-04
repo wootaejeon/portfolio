@@ -1,9 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import linkedinLogo from "../assets/linkedin.png";
 import githubLogo from "../assets/github.png";
 import resumeLogo from "../assets/resume.png";
+import chevronDown from "../assets/chevron-down.png";
+import shootingStar1 from "../assets/shootingStar1.png";
 
 const Main = () => {
   return (
@@ -13,38 +16,52 @@ const Main = () => {
       <div className="buttons">
         {Button(linkedinLogo.src, "https://www.linkedin.com/in/jeonwt7/")}
         {Button(githubLogo.src, "https://github.com/jeonwt7")}
-        {Button(resumeLogo.src, "./resume.docx")}
+        {Button(resumeLogo.src, "./Wootae Jeon Resume.docx")}
+      </div>
+      <div
+        className="viewProjects"
+        onClick={() =>
+          window.scrollTo({
+            top: 1000,
+            behavior: "smooth",
+          })
+        }
+      >
+        <h3> View Projects </h3>
+        <Image src={chevronDown.src} height="36" width="36" />
       </div>
 
       <style jsx>{`
         h1 {
-          font-size: 60px;
-          font-weight: 700;
+          font-family: Alegreya;
+          font-size: 95px;
+          font-weight: 500;
           line-height: 1.5;
-
-          border-bottom: 1px solid white;
         }
         h2 {
-          font-size: 35px;
-          font-weight: 700;
+          font-size: 48px;
+          font-weight: 500;
           line-height: 1.5;
         }
         h3 {
           line-height: 1.6;
-          font-size: 18px;
+          font-size: 30px;
           font-weight: 100;
 
-          margin-top: 20px;
+          margin-top: 180px;
         }
-
         .container {
           margin-top: 300px;
+          margin-bottom: 150px;
         }
         .buttons {
           flex-direction: row;
           justify-content: space-between;
           width: 300px;
           margin-top: 64px;
+        }
+        .viewProjects {
+          cursor: pointer;
         }
       `}</style>
     </div>

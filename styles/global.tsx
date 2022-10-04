@@ -3,7 +3,7 @@ import css from "styled-jsx/css";
 export default css.global`
   body {
     color: #ffffff;
-    font-family: Inter;
+    font-family: "Nunito Sans", sans-serif;
     margin: 0;
     width: 100vw;
 
